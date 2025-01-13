@@ -122,8 +122,9 @@
                     <a href="#" class="nav-link" data-bs-toggle="dropdown">
                         <span style="color: dodgerblue;" class="dropdown-toggle">Cursos Rápidos!</span>
                     </a>
+                    <span style="font-size: 10px; position: relative; bottom: 40px; left: 17px;" class="responsive-hidden"><span style="color: white;">Nexa</span><span style="color: dodgerblue;">Code</span><span style="color: white;"> Academy</span></span>
                     <div class="dropdown-menu m-0">
-                        <a href="#" class="dropdown-item">Html <span style="color: red; font-size: small;">(Próximamente!)</span></a>
+                        <a href="#" class="dropdown-item">Html</a>
                         <a href="#" class="dropdown-item">Css <span style="color: red; font-size: small;">(Próximamente!)</span></a>
                         <a href="#" class="dropdown-item">JavaScript <span style="color: red; font-size: small;">(Próximamente!)</span></a>
                         <a href="#" class="dropdown-item">Python <span style="color: red; font-size: small;">(Próximamente!)</span></a>
@@ -136,53 +137,69 @@
                     </div>
                 </div>
                 
-                <a href="contact.html" class="nav-item nav-link"></a>
+                
             </div>
             <a href="#" style="background-color: dodgerblue; color: white;" class="btn rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Empieza Ya!</a>
         </div>
     </nav>
+
+    <style>
+        /* Media query para pantallas pequeñas (ancho menor a 768px) */
+        @media (max-width: 768px) {
+            .responsive-hidden {
+                display: none; /* Oculta el elemento */
+            }
+        }
+        </style>
 
     <br>
     <br>
     <br>
 
     <!-- Políticas de Privacidad Start -->
-    <div class="container py-5">
-        <h2 class="mb-4">Políticas de Privacidad</h2>
-        <p><strong>Última actualización: 30/12/2024</strong></p>
-        <p>Tu privacidad es muy importante para nosotros. Esta política de privacidad describe cómo recopilamos, usamos y protegemos tu información personal cuando utilizas nuestro sitio web.</p>
+    <div class="container mx-auto px-4 py-8 max-w-3xl">
+        <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+            <h1 class="text-2xl md:text-3xl font-bold mb-4">Políticas de Privacidad</h1>
+            <p class="font-semibold mb-4">Última actualización: 30/12/2024</p>
+            <p class="mb-6">Tu privacidad es muy importante para nosotros. Esta política de privacidad describe cómo recopilamos, usamos y protegemos tu información personal cuando utilizas nuestro sitio web.</p>
 
-        <h4>1. Información que Recopilamos</h4>
-        <p>Podemos recopilar la siguiente información: nombre, dirección de correo electrónico, dirección IP, información de navegación y otra información que nos proporciones voluntariamente.</p>
+            <h2 class="text-xl md:text-2xl font-semibold mb-3">1. Información que Recopilamos</h2>
+            <p class="mb-6">Podemos recopilar la siguiente información: nombre, dirección de correo electrónico, dirección IP, información de navegación y otra información que nos proporciones voluntariamente.</p>
 
-        <h4>2. Uso de la Información</h4>
-        <p>Utilizamos tu información para:</p>
-        <ul>
-            <li>Mejorar nuestro sitio web y servicios.</li>
-            <li>Enviarte comunicaciones relevantes.</li>
-            <li>Procesar tus solicitudes y responder a tus consultas.</li>
-        </ul>
+            <h2 class="text-xl md:text-2xl font-semibold mb-3">2. Uso de la Información</h2>
+            <p class="mb-2">Utilizamos tu información para:</p>
+            <ul class="list-disc pl-6 mb-6">
+                <li>Mejorar nuestro sitio web y servicios.</li>
+                <li>Enviarte comunicaciones relevantes.</li>
+                <li>Procesar tus solicitudes y responder a tus consultas.</li>
+            </ul>
 
-        <h4>3. Protección de la Información</h4>
-        <p>Implementamos medidas de seguridad adecuadas para proteger tu información personal contra el acceso no autorizado, la divulgación o el uso indebido.</p>
+            <h2 class="text-xl md:text-2xl font-semibold mb-3">3. Protección de la Información</h2>
+            <p class="mb-6">Implementamos medidas de seguridad adecuadas para proteger tu información personal contra el acceso no autorizado, la divulgación o el uso indebido.</p>
 
-        <h4>4. Compartición de Información</h4>
-        <p>No compartimos tu información personal con terceros, excepto cuando sea necesario para cumplir con la ley o en caso de una fusión o adquisición de nuestra empresa.</p>
+            <h2 class="text-xl md:text-2xl font-semibold mb-3">4. Compartición de Información</h2>
+            <p class="mb-6">No compartimos tu información personal con terceros, excepto cuando sea necesario para cumplir con la ley o en caso de una fusión o adquisición de nuestra empresa.</p>
 
-        <h4>5. Tus Derechos</h4>
-        <p>Tienes derecho a acceder, corregir o eliminar tu información personal en cualquier momento. Para ejercer estos derechos, por favor contáctanos utilizando la información proporcionada a continuación.</p>
+            <h2 class="text-xl md:text-2xl font-semibold mb-3">5. Tus Derechos</h2>
+            <p class="mb-6">Tienes derecho a acceder, corregir o eliminar tu información personal en cualquier momento. Para ejercer estos derechos, por favor contáctanos utilizando la información proporcionada a continuación.</p>
 
-        <h4>6. Cambios a Esta Política</h4>
-        <p>Podemos actualizar nuestra política de privacidad de vez en cuando. Te notificaremos sobre cambios significativos a través de nuestro sitio web.</p>
+            <h2 class="text-xl md:text-2xl font-semibold mb-3">6. Cambios a Esta Política</h2>
+            <p class="mb-6">Podemos actualizar nuestra política de privacidad de vez en cuando. Te notificaremos sobre cambios significativos a través de nuestro sitio web.</p>
 
-        <h4>7. Contacto</h4>
-        <p>Si tienes alguna pregunta sobre esta política de privacidad, no dudes en <button class="btn-contact" onclick="window.location.href='mailto:tu-email@ejemplo.com'">Contáctanos</button>.</p>
+            <h2 class="text-xl md:text-2xl font-semibold mb-3">7. Contacto</h2>
+            <p class="mb-4">Si tienes alguna pregunta sobre esta política de privacidad, no dudes en contactarnos.</p>
+            <button onclick="window.location.href='mailto:tu-email@ejemplo.com'" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300">
+                Contáctanos
+            </button>
+        </div>
     </div>
     <!-- Políticas de Privacidad End -->
 
-    <div class="footer">
-        <p>&copy; 2024 NexaCode Group. Todos los derechos reservados.</p>
-    </div>
+    <footer class="bg-gray-200 py-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 NexaCode Group. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
