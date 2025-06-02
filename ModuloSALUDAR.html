@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>SALUDAR - NexaCode Group</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="lib/animate/animate.min.css"/>
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        .membership-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 100%;
+        }
+        .membership-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .membership-header {
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        .standard {
+            background: linear-gradient(135deg, #6c757d, #495057);
+        }
+        .premium {
+            background: linear-gradient(135deg, #ffc107, #fd7e14);
+        }
+        .business {
+            background: linear-gradient(135deg, #20c997, #0d6efd);
+        }
+        .one-time {
+            background: linear-gradient(135deg, #6610f2, #6f42c1);
+        }
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 15px 0;
+        }
+        .period {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+        .features-list {
+            padding: 0;
+            list-style: none;
+        }
+        .features-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+        }
+        .features-list li i {
+            margin-right: 10px;
+            color: dodgerblue;
+        }
+        .btn-membership {
+            width: 100%;
+            padding: 12px;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        .btn-standard {
+            background-color: #6c757d;
+            color: white;
+        }
+        .btn-premium {
+            background-color: #ffc107;
+            color: #212529;
+        }
+        .btn-business {
+            background-color: #20c997;
+            color: white;
+        }
+        .btn-one-time {
+            background-color: #6610f2;
+            color: white;
+        }
+        .highlight-card {
+            border: 2px solid #0d6efd;
+            position: relative;
+        }
+        .highlight-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background-color: #0d6efd;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .health-icon {
+            color: #e63946;
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <h1 style="color: dodgerblue;" class=""><i class="fas fa-graduation-cap me-3"></i><span class="text-change">Nexa</span>Code <span class="text-change">Group</span></h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">Sobre Nosotros</a>
+                    <a href="#Servicios" class="nav-item nav-link">Servicios</a>
+                    <a href="FAQ.html" class="nav-item nav-link">Ayuda</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                            <span class="dropdown-toggle">Plataformas</span> 
+                        </a>
+                        <span style="font-size: 10px; position: relative; bottom: 40px; left: 17px;" class="responsive-hidden"><span style="color: white;">Mis Sistemas</span>
+                        <div class="dropdown-menu m-0">
+                            <a href="prestifypro.html" class="dropdown-item">PrestifyPro</a>
+                            <a href="stokifypro.html" class="dropdown-item">StokifyPro</a>
+                            <a href="#" class="dropdown-item">StokifyExpress <span style="color: red; font-size: small;">(Próximamente!)</span></a>
+                            <a href="saludar.html" class="dropdown-item">SALUDAR</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.instagram.com/nexacodegroup/profilecard/?igsh=MWlqbzdwNXUzOXpvZA==" style="background-color: dodgerblue; color: white;" class="btn rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Visítanos!</a>
+            </div>
+        </nav>
+        
+        <!-- Hero Section for SALUDAR -->
+        <div class="header-carousel owl-carousel">
+            <div class="header-carousel-item">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="img-fluid w-100" alt="SALUDAR Hero Image">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row gy-0 gx-5">
+                            <div class="col-lg-0 col-xl-5"></div>
+                            <div class="col-xl-7 animated fadeInLeft">
+                                <div class="text-sm-center text-md-end">
+                                    <h4 style="color: dodgerblue;" class="text-uppercase fw-bold mb-4">Sistema Integral de Salud</h4>
+                                    <h1 class="display-4 text-uppercase text-white mb-4">SALUDAR</h1>
+                                    <p class="mb-5 fs-5">La solución completa para la gestión médica que optimiza tu consultorio, clínica u hospital. Organización, eficiencia y mejor atención al paciente.</p>
+                                    <div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4">
+                                        <a style="background-color: dodgerblue; color: white;" 
+                                           class="btn rounded-pill py-3 px-4 px-md-5 ms-2" 
+                                           href="#membresias">
+                                           Ver Membresías
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+
+    <!-- About SALUDAR Section -->
+    <div class="container-fluid about py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div>
+                        <h4 style="color: dodgerblue;" class="">¿Qué es SALUDAR?</h4>
+                        <h1 class="display-5 mb-4">Transformando la gestión médica</h1>
+                        <p class="mb-4">SALUDAR es un sistema de gestión médica integral diseñado para consultorios, clínicas y centros de salud. Centraliza toda la información de pacientes, citas, historiales clínicos, recetas, facturación y más en una plataforma segura, intuitiva y adaptada a las necesidades del sector salud.</p>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div><i style="color: #e63946;" class="fas fa-user-md fa-3x"></i></div>
+                                    <div class="ms-4">
+                                        <h4>Para Profesionales</h4>
+                                        <p>Optimiza tu tiempo y mejora la atención a tus pacientes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div><i style="color: #e63946;" class="fas fa-clinic-medical fa-3x"></i></div>
+                                    <div class="ms-4">
+                                        <h4>Para Establecimientos</h4>
+                                        <p>Gestión centralizada de múltiples especialistas y áreas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="bg-primary rounded position-relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="img-fluid rounded w-100" alt="SALUDAR Dashboard">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="container-fluid service pb-5">
+        <div class="container pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 style="color: dodgerblue;" class="">Características Principales</h4>
+                <h1 class="display-5 mb-4">Herramientas diseñadas para el sector salud</h1>
+                <p class="mb-0">
+                    SALUDAR combina todas las funcionalidades que necesitas para gestionar eficientemente tu consultorio o clínica, mejorando tanto la experiencia del paciente como tu productividad.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="img-fluid rounded-top w-100" alt="Gestión de Pacientes">
+                        </div>
+                        <div class="rounded-bottom p-4">
+                            <h4 class="d-inline-block mb-4">Gestión de Pacientes</h4>
+                            <p class="mb-4">
+                                Historial médico completo, alergias, medicamentos, antecedentes familiares y más. Todo organizado y accesible para una atención médica informada y personalizada.
+                            </p>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check health-icon"></i> Historial clínico digital</li>
+                                <li><i class="fas fa-check health-icon"></i> Documentos y estudios médicos</li>
+                                <li><i class="fas fa-check health-icon"></i> Alertas de alergias</li>
+                                <li><i class="fas fa-check health-icon"></i> Antecedentes familiares</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="img-fluid rounded-top w-100" alt="Agenda Médica">
+                        </div>
+                        <div class="rounded-bottom p-4">
+                            <h4 class="d-inline-block mb-4">Agenda Médica Inteligente</h4>
+                            <p class="mb-4">
+                                Programa y gestiona citas con recordatorios automáticos. Visualiza tu disponibilidad, evita solapamientos y optimiza tu tiempo con una agenda diseñada para profesionales de la salud.
+                            </p>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check health-icon"></i> Agenda por especialista</li>
+                                <li><i class="fas fa-check health-icon"></i> Recordatorios automáticos</li>
+                                <li><i class="fas fa-check health-icon"></i> Bloqueo de horarios</li>
+                                <li><i class="fas fa-check health-icon"></i> Consultas recurrentes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="img-fluid rounded-top w-100" alt="Facturación y Reportes">
+                        </div>
+                        <div class="rounded-bottom p-4">
+                            <h4 class="d-inline-block mb-4">Facturación y Reportes</h4>
+                            <p class="mb-4">
+                                Emite facturas, recetas y documentos médicos con tu firma digital. Genera reportes financieros, estadísticas de consultas y análisis de tu práctica médica.
+                            </p>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check health-icon"></i> Facturación electrónica</li>
+                                <li><i class="fas fa-check health-icon"></i> Recetas digitales</li>
+                                <li><i class="fas fa-check health-icon"></i> Reportes financieros</li>
+                                <li><i class="fas fa-check health-icon"></i> Estadísticas de consultas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Membership Section -->
+    <div id="membresias" class="container-fluid py-5" style="background-color: #f8f9fa;">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 style="color: dodgerblue;" class="">Planes de Membresía</h4>
+                <h1 class="display-5 mb-4">Elige el plan perfecto para tu práctica médica</h1>
+                <p class="mb-0">
+                    Ofrecemos diferentes niveles de servicio para adaptarnos a las necesidades de tu consultorio o clínica.
+                </p>
+            </div>
+            <div class="row g-4">
+                <!-- Standard Membership -->
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="membership-card shadow-sm">
+                        <div class="membership-header standard">
+                            <h3>Estándar</h3>
+                            <div class="price">$69<span class="period">/mes</span></div>
+                            <p>Ideal para consultorios individuales</p>
+                        </div>
+                        <div class="p-4 bg-white">
+                            <ul class="features-list">
+                                <li><i class="fas fa-check health-icon"></i> 1 profesional</li>
+                                <li><i class="fas fa-check health-icon"></i> Hasta 100 pacientes activos</li>
+                                <li><i class="fas fa-check health-icon"></i> Agenda médica básica</li>
+                                <li><i class="fas fa-check health-icon"></i> Historial clínico digital</li>
+                                <li><i class="fas fa-check health-icon"></i> Recetas electrónicas</li>
+                                <li><i class="fas fa-check health-icon"></i> Soporte por correo electrónico</li>
+                            </ul>
+                            <button class="btn btn-membership btn-standard mt-3">Seleccionar Plan</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Premium Membership -->
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="membership-card shadow-sm highlight-card">
+                        <span class="highlight-badge">POPULAR</span>
+                        <div class="membership-header premium">
+                            <h3>Premium</h3>
+                            <div class="price">$129<span class="period">/mes</span></div>
+                            <p>Para clínicas pequeñas</p>
+                        </div>
+                        <div class="p-4 bg-white">
+                            <ul class="features-list">
+                                <li><i class="fas fa-check health-icon"></i> Hasta 3 profesionales</li>
+                                <li><i class="fas fa-check health-icon"></i> Hasta 500 pacientes activos</li>
+                                <li><i class="fas fa-check health-icon"></i> Agenda médica avanzada</li>
+                                <li><i class="fas fa-check health-icon"></i> Historial clínico completo</li>
+                                <li><i class="fas fa-check health-icon"></i> Facturación electrónica</li>
+                                <li><i class="fas fa-check health-icon"></i> Soporte prioritario</li>
+                                <li><i class="fas fa-check health-icon"></i> App móvil para pacientes</li>
+                            </ul>
+                            <button class="btn btn-membership btn-premium mt-3">Seleccionar Plan</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Business Membership -->
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="membership-card shadow-sm">
+                        <div class="membership-header business">
+                            <h3>Empresarial</h3>
+                            <div class="price">$299<span class="period">/mes</span></div>
+                            <p>Para clínicas y hospitales</p>
+                        </div>
+                        <div class="p-4 bg-white">
+                            <ul class="features-list">
+                                <li><i class="fas fa-check health-icon"></i> Profesionales ilimitados</li>
+                                <li><i class="fas fa-check health-icon"></i> Pacientes ilimitados</li>
+                                <li><i class="fas fa-check health-icon"></i> Múltiples especialidades</li>
+                                <li><i class="fas fa-check health-icon"></i> Gestión de camas (opcional)</li>
+                                <li><i class="fas fa-check health-icon"></i> Facturación hospitalaria</li>
+                                <li><i class="fas fa-check health-icon"></i> Soporte 24/7</li>
+                                <li><i class="fas fa-check health-icon"></i> API para integraciones</li>
+                                <li><i class="fas fa-check health-icon"></i> Entrenamiento personalizado</li>
+                            </ul>
+                            <button class="btn btn-membership btn-business mt-3">Seleccionar Plan</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- One-Time Payment -->
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="membership-card shadow-sm">
+                        <div class="membership-header one-time">
+                            <h3>Pago Único</h3>
+                            <div class="price">$2,999</div>
+                            <p>Licencia perpetua</p>
+                        </div>
+                        <div class="p-4 bg-white">
+                            <ul class="features-list">
+                                <li><i class="fas fa-check health-icon"></i> Todos los features Premium</li>
+                                <li><i class="fas fa-check health-icon"></i> Sin pagos mensuales</li>
+                                <li><i class="fas fa-check health-icon"></i> Actualizaciones por 2 años</li>
+                                <li><i class="fas fa-check health-icon"></i> Soporte prioritario por 2 años</li>
+                                <li><i class="fas fa-check health-icon"></i> Instalación en servidor propio</li>
+                                <li><i class="fas fa-check health-icon"></i> Personalización inicial incluida</li>
+                                <li><i class="fas fa-check health-icon"></i> Capacitación para tu equipo</li>
+                            </ul>
+                            <button class="btn btn-membership btn-one-time mt-3">Seleccionar Plan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.2s">
+                <p class="mb-4">¿Necesitas un plan personalizado para tu institución médica?</p>
+                <a style="background-color: dodgerblue; color: white;" 
+                   class="btn rounded-pill py-3 px-5" 
+                   href="https://wa.me/8293943239?text=¡Hola!%20Estoy%20interesado%20en%20obtener%20más%20información%20sobre%20SALUDAR%20y%20posiblemente%20un%20plan%20personalizado%20para%20mi%20consultorio/clínica.%20Por%20favor,%20contáctenme%20cuando%20sea%20posible.%20Gracias." 
+                   target="_blank">
+                   Contáctanos
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 style="color: dodgerblue;" class="">Lo que dicen nuestros clientes</h4>
+                <h1 class="display-5 mb-4">Historias de éxito con SALUDAR</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" class="rounded-circle me-3" width="60" alt="Client">
+                                <div>
+                                    <h5 class="mb-0">Dra. María Fernández</h5>
+                                    <small>Cardióloga</small>
+                                </div>
+                            </div>
+                            <p class="mb-0">"Desde que implementé SALUDAR en mi consultorio, he reducido el tiempo administrativo en un 60%. El historial clínico digital me permite acceder a toda la información del paciente en segundos."</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg" class="rounded-circle me-3" width="60" alt="Client">
+                                <div>
+                                    <h5 class="mb-0">Dr. Carlos Ruiz</h5>
+                                    <small>Clínica Multidisciplinaria</small>
+                                </div>
+                            </div>
+                            <p class="mb-0">"Con 8 especialistas en nuestra clínica, SALUDAR ha sido fundamental para coordinar agendas y compartir información entre profesionales. La facturación electrónica ha simplificado enormemente nuestro proceso administrativo."</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg" class="rounded-circle me-3" width="60" alt="Client">
+                                <div>
+                                    <h5 class="mb-0">Dra. Laura González</h5>
+                                    <small>Pediatra</small>
+                                </div>
+                            </div>
+                            <p class="mb-0">"Las recetas electrónicas y el recordatorio automático de vacunas han mejorado mucho la experiencia de mis pacientes. Los padres aprecian poder acceder al historial de sus hijos desde la app móvil."</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="container-fluid py-5" style="background-color: #001f3f;">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-7 wow fadeInLeft" data-wow-delay="0.2s">
+                    <h1 class="display-5 text-white mb-4">¿Listo para modernizar tu práctica médica?</h1>
+                    <p class="mb-4 text-white">SALUDAR está diseñado para ayudarte a optimizar tu tiempo, mejorar la atención a tus pacientes y gestionar eficientemente tu consultorio o clínica. Agenda una demostración hoy mismo.</p>
+                </div>
+                <div class="col-lg-5 wow fadeInRight" data-wow-delay="0.4s">
+                    <div class="d-flex flex-column flex-sm-row">
+                        <a style="background-color: white; color: #001f3f;" 
+                           class="btn rounded-pill py-3 px-4 me-sm-3 mb-3 mb-sm-0" 
+                           href="https://wa.me/8293943239?text=¡Hola!%20Me%20interesa%20agendar%20una%20demostración%20de%20SALUDAR%20para%20mi%20consultorio/clínica.%20Por%20favor,%20indíquenme%20los%20horarios%20disponibles.%20Gracias." 
+                           target="_blank">
+                           Agendar Demo
+                        </a>
+                        <a style="background-color: dodgerblue; color: white;" 
+                           class="btn rounded-pill py-3 px-4" 
+                           href="#membresias">
+                           Ver Planes
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5" style="background-color: #001f3f;">
+        <div class="container py-5 border-start-0 border-end-0" style="border: 1px solid; border-color: rgba(255, 255, 255, 0.08);">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-4">
+                    <div class="footer-item">
+                        <a href="index.html" class="p-0">
+                            <h4 class="text-white"><i class="fas fa-graduation-cap me-3"></i>NexaCode Group | JBF</h4>
+                        </a>
+                        <p class="mb-4 text-white">NexaCode Group es una empresa enfocada en la transformación digital, desarrollando soluciones tecnológicas eficientes y a la medida para potenciar proyectos, emprendimientos y empresas en un entorno digital en constante evolución.</p>
+                        <div class="d-flex">
+                            <a class="btn btn-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/nexacodegroup/profilecard/?igsh=MWlqbzdwNXUzOXpvZA=="><i class="fab fa-instagram text-dark"></i></a>
+                            <a class="btn btn-light btn-sm-square rounded-circle me-0" href="#"><i class="fab fa-linkedin-in text-dark"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">Menu</h4>
+                        <a href="index.html" class="text-light"><i class="fas fa-angle-right me-2"></i> Home</a><br>
+                        <a href="about.html" class="text-light"><i class="fas fa-angle-right me-2"></i> Sobre Nosotros</a><br>
+                        <a href="#Servicios" class="text-light"><i class="fas fa-angle-right me-2"></i> Servicios</a><br>
+                        <a href="#" class="text-light"><i class="fas fa-angle-right me-2"></i>Mis Sistemas</a><br>
+                        <a href="FAQ.html" class="text-light"><i class="fas fa-angle-right me-2"></i> Ayuda</a><br>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">Soporte</h4>
+                        <a href="politicas.html" class="text-light"><i class="fas fa-angle-right me-2"></i> Politica de Privacidad</a><br>
+                        <a href="terminos.html" class="text-light"><i class="fas fa-angle-right me-2"></i> Terminos y condiciones</a><br>
+                        <a href="FAQ.html" class="text-light"><i class="fas fa-angle-right me-2"></i> Ayuda</a><br>
+                        <a href="about.html" class="text-light"><i class="fas fa-angle-right me-2"></i> Sobre Nosotros</a><br>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">Contacto</h4>
+                        <p class="text-light"><i class="fas fa-envelope me-2"></i> info@nexacodegroup.com</p>
+                        <p class="text-light"><i class="fas fa-phone me-2"></i> +1 829 394 3239</p>
+                        <div class="d-flex">
+                            <a class="btn btn-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/nexacodegroup/profilecard/?igsh=MWlqbzdwNXUzOXpvZA=="><i class="fab fa-instagram text-dark"></i></a>
+                            <a class="btn btn-light btn-sm-square rounded-circle me-0" href="#"><i class="fab fa-linkedin-in text-dark"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4" style="background-color: #00274d;">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-white"><a href="#" class="border-bottom text-light"><i class="fas fa-copyright text-light me-2"></i>NexaCode Group</a>, All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+  <!-- Back to Top -->
+    <a style="background-color: dodgerblue; color: white;" href="#" class="btn btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+ <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+
+</html>
