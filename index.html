@@ -57,24 +57,78 @@
                 <a href="about.html" class="nav-item nav-link">Sobre Nosotros</a>
                 <a href="#Servicios" class="nav-item nav-link">Servicios</a>
                 <a href="FAQ.html" class="nav-item nav-link">Ayuda</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                        <span class="dropdown-toggle">Plataformas</span> 
-                    </a>
-                    <span style="font-size: 10px; position: relative; bottom: 40px; left: 17px;" class="responsive-hidden"><span style="color: white;">Mis Sistemas</span>
-                    <div class="dropdown-menu m-0">
-                        <a href="ModuloPrestifyPro.html" class="dropdown-item">PrestifyPro</a>
-                        <a href="ModuloStokifyPro.html" class="dropdown-item">StokifyPro</a>
-                        <a href="ModuloStokifyExpress.html" class="dropdown-item">StokifyExpress</a>
-                        <a href="ModuloSALUDAR.html" class="dropdown-item">SALUDAR</a>
-                    </div>
-                </div>
+               <div class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="platformsDropdown">
+        Plataformas<br>
+        <small class="text-muted">Mis Sistemas</small>
+    </a>
+    <div class="dropdown-menu m-0" aria-labelledby="platformsDropdown">
+        <a href="ModuloPrestifyPro.html" class="dropdown-item">PrestifyPro</a>
+        <a href="ModuloStokifyPro.html" class="dropdown-item">StokifyPro</a>
+        <a href="ModuloStokifyExpress.html" class="dropdown-item">StokifyExpress</a>
+        <a href="ModuloSALUDAR.html" class="dropdown-item">SALUDAR</a>
+    </div>
+</div>
+
 
             </div>
             <a href="https://www.instagram.com/nexacodegroup/profilecard/?igsh=MWlqbzdwNXUzOXpvZA==" style="background-color: dodgerblue; color: white;" class="btn rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Visítanos!</a>
         </div>
     </nav>
 </div>
+
+
+<style>
+/* Corrección para dropdown en móvil */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static !important;
+        transform: none !important;
+        width: 100%;
+    }
+    
+    .dropdown-toggle::after {
+        display: inline-block;
+        margin-left: 0.255em;
+        vertical-align: 0.255em;
+        content: "";
+        border-top: 0.3em solid;
+        border-right: 0.3em solid transparent;
+        border-bottom: 0;
+        border-left: 0.3em solid transparent;
+    }
+    
+    /* Asegurar que los botones sean táctiles */
+    .btn {
+        touch-action: manipulation;
+    }
+}
+</style>
+
+<script>
+// Asegurar que Bootstrap JS se inicialice correctamente
+document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar todos los dropdowns
+    var dropdowns = document.querySelectorAll('.dropdown-toggle');
+    dropdowns.forEach(function(dropdown) {
+        dropdown.addEventListener('click', function(e) {
+            // Solo para móviles
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                var menu = this.nextElementSibling;
+                if (menu.style.display === 'block') {
+                    menu.style.display = 'none';
+                } else {
+                    menu.style.display = 'block';
+                }
+            }
+        });
+    });
+    
+    // Prevenir clics fantasma en móviles
+    document.addEventListener('touchstart', function(){}, true);
+});
+</script>
 
 <style>
     /* Media query para pantallas pequeñas (ancho menor a 768px) */
@@ -251,7 +305,7 @@ En NexaCode Group desarrollamos soluciones tecnológicas adaptadas a diferentes 
                                 <a href="ModuloPrestifyPro.html" class="h4 d-inline-block mb-4">PrestifyPro</a>
                                 <p class="mb-4">PrestifyPro es la solución definitiva para la gestión de préstamos en financieras modernas. Diseñado pensando en la eficiencia, la seguridad y la escalabilidad, este sistema permite administrar todo el ciclo de vida de un préstamo: desde la solicitud inicial hasta el seguimiento de pagos, renovaciones y reportes. Con una interfaz intuitiva y funcionalidades avanzadas, PrestifyPro agiliza las operaciones diarias, reduce errores humanos y mejora significativamente la atención al cliente. 
                                 </p>
-                                <a style="background-color: dodgerblue; color: white;" class="btn btn-primary rounded-pill py-2 px-4" href="htmlCurso.html">Conoce PrestifyPro</a>
+                                <a style="background-color: dodgerblue; color: white;" class="btn btn-primary rounded-pill py-2 px-4" href="ModuloPrestifyPro.html">Conoce PrestifyPro</a>
                             </div>
                         </div>
                     </div>
@@ -264,7 +318,7 @@ En NexaCode Group desarrollamos soluciones tecnológicas adaptadas a diferentes 
                                 <a href="ModuloStokifyPro.html" class="h4 d-inline-block mb-4">StokifyPro</a>
                                 <p class="mb-4">InvenPro es el sistema integral de inventario y facturación diseñado para llevar el control total de tu negocio en tiempo real. Ideal para comercios, almacenes y empresas de todos los tamaños, InvenPro centraliza la gestión de productos, entradas y salidas de stock, generación de facturas, control de ventas, reportes contables y mucho más, todo desde una plataforma intuitiva, rápida y segura. Gracias a su diseño flexible, puedes personalizarlo según las necesidades de tu empresa y acceder a información clave que te ayudará a tomar decisiones más inteligentes. 
                                 </p>
-                                <a style="background-color: dodgerblue; color: white;" class="btn btn-primary rounded-pill py-2 px-4" href="#">Conoce InvenPro</a>
+                                <a style="background-color: dodgerblue; color: white;" class="btn btn-primary rounded-pill py-2 px-4" href="ModuloStokifyPro.html">Conoce StokifyPro</a>
                             </div>
                         </div>
                     </div>
@@ -277,7 +331,7 @@ En NexaCode Group desarrollamos soluciones tecnológicas adaptadas a diferentes 
                                 <a href="ModuloStokifyExpress.html" class="h4 d-inline-block mb-4">StokifyExpress</a>
                                 <p class="mb-4">InvenExpress es la herramienta ideal para quienes necesitan un sistema de inventario y facturación sencillo, práctico y eficiente para uso personal o pequeños emprendimientos. Diseñado para usuarios que buscan llevar un control claro de sus productos, ventas y facturas sin complicaciones, InvenExpress ofrece una experiencia ágil con funciones esenciales que realmente hacen la diferencia: gestión básica de inventario, emisión rápida de facturas, historial de movimientos, y reportes simples pero útiles para tu día a día. Su interfaz amigable permite que cualquier persona, incluso sin experiencia previa, pueda comenzar a usarlo en minutos. Perfecto para emprendedores, freelancers, vendedores independientes o pequeños negocios en crecimiento, InvenExpress te ayuda a mantener el orden, ahorrar tiempo y tener siempre a mano la información que necesitas para tomar decisiones acertadas. 
                                 </p>
-                                <a style="background-color: dodgerblue; color: white;" class="btn btn-primary rounded-pill py-2 px-4" href="#">Conoce InvenExpress</a>
+                                <a style="background-color: dodgerblue; color: white;" class="btn btn-primary rounded-pill py-2 px-4" href="ModuloStokifyExpress.html">Conoce StokifyExpress</a>
                             </div>
                         </div>
                     </div>
@@ -290,7 +344,7 @@ En NexaCode Group desarrollamos soluciones tecnológicas adaptadas a diferentes 
                                 <a href="ModuloSALUDAR.html" class="h4 d-inline-block mb-4">SALUDAR</a>
                                 <p class="mb-4">SALUDAR es un sistema de gestión médica integral diseñado para optimizar la administración de consultorios, clínicas y centros de salud de forma eficiente, segura y organizada. Con SALUDAR podrás llevar un control completo de pacientes, citas, historiales clínicos, recetas, facturación y más, todo desde una plataforma intuitiva y adaptada a las necesidades del sector salud. Facilita la coordinación entre profesionales, mejora la atención al paciente y reduce el tiempo administrativo con herramientas que automatizan procesos y centralizan la información médica de forma clara y accesible. Además, ofrece funciones clave como recordatorios automáticos de citas, gestión de tratamientos, generación de reportes médicos y administrativos, y respaldo seguro de datos. Ya sea para un consultorio independiente o una clínica con múltiples especialidades, SALUDAR se adapta al tamaño y dinámica de tu equipo. 
                                 </p>
-                                <a style="background-color: dodgerblue; color: white;" class="btn btn-primary rounded-pill py-2 px-4" href="#">Conoce SALUDAR</a>
+                                <a style="background-color: dodgerblue; color: white;" class="btn btn-primary rounded-pill py-2 px-4" href="ModuloSALUDAR.html">Conoce SALUDAR</a>
                             </div>
                         </div>
                     </div>

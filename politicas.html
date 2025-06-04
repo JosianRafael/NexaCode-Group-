@@ -92,6 +92,58 @@
     </style>
 </head>
 
+ <style>
+/* Corrección para dropdown en móvil */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static !important;
+        transform: none !important;
+        width: 100%;
+    }
+    
+    .dropdown-toggle::after {
+        display: inline-block;
+        margin-left: 0.255em;
+        vertical-align: 0.255em;
+        content: "";
+        border-top: 0.3em solid;
+        border-right: 0.3em solid transparent;
+        border-bottom: 0;
+        border-left: 0.3em solid transparent;
+    }
+    
+    /* Asegurar que los botones sean táctiles */
+    .btn {
+        touch-action: manipulation;
+    }
+}
+</style>
+
+<script>
+// Asegurar que Bootstrap JS se inicialice correctamente
+document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar todos los dropdowns
+    var dropdowns = document.querySelectorAll('.dropdown-toggle');
+    dropdowns.forEach(function(dropdown) {
+        dropdown.addEventListener('click', function(e) {
+            // Solo para móviles
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                var menu = this.nextElementSibling;
+                if (menu.style.display === 'block') {
+                    menu.style.display = 'none';
+                } else {
+                    menu.style.display = 'block';
+                }
+            }
+        });
+    });
+    
+    // Prevenir clics fantasma en móviles
+    document.addEventListener('touchstart', function(){}, true);
+});
+</script>
+
 <body>
 
     <!-- Spinner Start -->
@@ -118,18 +170,18 @@
                 <a style="color: dodgerblue;" href="about.html" class="nav-item nav-link">Sobre Nosotros</a>
                 <a style="color: dodgerblue;" href="#Servicios" class="nav-item nav-link">Servicios</a>
                 <a style="color: dodgerblue;" href="FAQ.html" class="nav-item nav-link">Ayuda</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                        <span style="color: dodgerblue;" class="dropdown-toggle">Plataformas</span>
-                    </a>
-                    <span style="font-size: 10px; position: relative; bottom: 40px; left: 17px;" class="responsive-hidden"><span style="color: white;">Mis Sistemas</span>
-                    <div class="dropdown-menu m-0">
-                         <a href="htmlCurso.html" class="dropdown-item">PrestifyPro <span style="color: red; font-size: small;">(Próximamente!)</span></a>
-                        <a href="#" class="dropdown-item">StotikyPro <span style="color: red; font-size: small;">(Próximamente!)</span></a>
-                        <a href="#" class="dropdown-item">StotikyExpress <span style="color: red; font-size: small;">(Próximamente!)</span></a>
-                        <a href="#" class="dropdown-item">SALUDAR <span style="color: red; font-size: small;">(Próximamente!)</span></a>
-                    </div>
-                </div>
+               <div class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="platformsDropdown">
+        Plataformas<br>
+        <small class="text-muted">Mis Sistemas</small>
+    </a>
+    <div class="dropdown-menu m-0" aria-labelledby="platformsDropdown">
+        <a href="ModuloPrestifyPro.html" class="dropdown-item">PrestifyPro</a>
+        <a href="ModuloStokifyPro.html" class="dropdown-item">StokifyPro</a>
+        <a href="ModuloStokifyExpress.html" class="dropdown-item">StokifyExpress</a>
+        <a href="ModuloSALUDAR.html" class="dropdown-item">SALUDAR</a>
+    </div>
+</div>
                 
                 
             </div>
