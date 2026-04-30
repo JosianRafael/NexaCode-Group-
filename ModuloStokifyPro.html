@@ -355,122 +355,153 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 
-    <!-- Membership Section -->
-    <div id="membresias" class="container-fluid py-5" style="background-color: #f8f9fa;">
-        <div class="container py-5">
-            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 style="color: dodgerblue;" class="">Planes de Membresía</h4>
-                <h1 class="display-5 mb-4">Elige el plan perfecto para tu negocio</h1>
-                <p class="mb-0">
-                    Ofrecemos diferentes niveles de servicio para adaptarnos a las necesidades y tamaño de tu operación comercial.
-                </p>
-            </div>
-            <div class="row g-4">
+   <!-- Membership Section -->
+<div id="membresias" class="container-fluid py-5" style="background-color: #f8f9fa;">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 style="color: dodgerblue;" class="">Planes de Membresía</h4>
+            <h1 class="display-5 mb-4">Elige el plan perfecto para tu negocio</h1>
+            <p class="mb-0">
+                Ofrecemos diferentes niveles de servicio para adaptarnos a las necesidades y tamaño de tu operación de préstamos.
+            </p>
+        </div>
+
+        <!-- SCROLL HORIZONTAL -->
+        <div style="overflow-x: auto;">
+            <div class="d-flex gap-4" style="min-width: max-content;">
+
                 <!-- Standard Membership -->
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="membership-card shadow-sm">
-                        <div class="membership-header standard">
-                            <h3>Estándar</h3>
-                            <div class="price">$20<span class="period">/mes</span></div>
-                            <p>Ideal para pequeños negocios</p>
+                <div class="wow fadeInUp" data-wow-delay="0.2s" style="width: 280px; flex: 0 0 auto;">
+                    <div class="membership-card shadow-sm h-100 d-flex flex-column">
+                        <div class="membership-header standard" style="background: linear-gradient(45deg, #007bff, #00c6ff); color:white;">
+                            <h5>Estándar</h5>
+                            <div class="price">US$15<span class="period">/mes</span></div>
+                            <p style="font-size: 13px;">Ideal para pequeñas financieras</p>
                         </div>
-                        <div class="p-4 bg-white">
-                            <ul class="features-list">
-                                <li><i class="fas fa-check"></i> Hasta 500 productos</li>
-                                <li><i class="fas fa-check"></i> 1 almacén/sucursal</li>
-                                <li><i class="fas fa-check"></i> Facturación básica</li>
-                                <li><i class="fas fa-check"></i> Reportes estándar</li>
-                                <li><i class="fas fa-check"></i> Soporte por email</li>
-                                <li><i class="fas fa-check"></i> 1 usuario</li>
+                        <div class="p-3 bg-white d-flex flex-column flex-grow-1">
+                            <ul class="features-list" style="font-size: 13px;">
+                                <li><i class="fas fa-check"></i> Hasta 100 préstamos activos</li>
+                                <li><i class="fas fa-check"></i> Hasta 100 clientes</li>
+                                <li><i class="fas fa-check"></i> Hasta 10 lineas de Credito</li>
+                                <li><i class="fas fa-check"></i> 1 Usuario</li>
+                                <li><i class="fas fa-check"></i> Fotos y documentos de clientes</li>
+                                <li><i class="fas fa-check"></i> Soporte por correo electrónico y via WhatsApp</li>
+                                <li><i class="fas fa-check"></i> Backup Diario</li>
                             </ul>
-                            <button class="btn btn-membership btn-standard mt-3">Seleccionar Plan</button>
+                            <button class="btn btn-membership mt-auto" style="background:#007bff;color:white;">Seleccionar Plan</button>
                         </div>
                     </div>
                 </div>
-                
+
+                <!-- Membership $20 -->
+                <div class="wow fadeInUp" data-wow-delay="0.3s" style="width: 280px; flex: 0 0 auto;">
+                    <div class="membership-card shadow-sm h-100 d-flex flex-column">
+                        <div class="membership-header" style="background: linear-gradient(45deg, #6f42c1, #b085f5); color:white;">
+                            <h5>Avanzado</h5>
+                            <div class="price">US$20<span class="period">/mes</span></div>
+                            <p style="font-size: 13px;">Más capacidad para crecer</p>
+                        </div>
+                        <div class="p-3 bg-white d-flex flex-column flex-grow-1">
+                            <ul class="features-list" style="font-size: 13px;">
+                                <li><i class="fas fa-check"></i> Hasta 200 préstamos activos</li>
+                                <li><i class="fas fa-check"></i> Hasta 200 clientes</li>
+                                <li><i class="fas fa-check"></i> Hasta 20 lineas de Credito</li>
+                                <li><i class="fas fa-check"></i> 2 Usuarios</li>
+                                <li><i class="fas fa-check"></i> Fotos y documentos de clientes</li>
+                                <li><i class="fas fa-check"></i> Soporte por WhatsApp</li>
+                                <li><i class="fas fa-check"></i> Backup Diario</li>
+                            </ul>
+                            <button class="btn btn-membership mt-auto" style="background:#6f42c1;color:white;">Seleccionar Plan</button>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Premium Membership -->
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="membership-card shadow-sm highlight-card">
+                <div class="wow fadeInUp" data-wow-delay="0.4s" style="width: 280px; flex: 0 0 auto;">
+                    <div class="membership-card shadow-sm highlight-card h-100 d-flex flex-column">
                         <span class="highlight-badge">POPULAR</span>
-                        <div class="membership-header premium">
-                            <h3>Premium</h3>
-                            <div class="price">$30<span class="period">/mes</span></div>
-                            <p>Para negocios en crecimiento</p>
+                        <div class="membership-header premium" style="background: linear-gradient(45deg, #28a745, #85e085); color:white;">
+                            <h5>Premium</h5>
+                            <div class="price">US$30<span class="period">/mes</span></div>
+                            <p style="font-size: 13px;">Para negocios en crecimiento</p>
                         </div>
-                        <div class="p-4 bg-white">
-                            <ul class="features-list">
-                                <li><i class="fas fa-check"></i> Hasta 2,000 productos</li>
-                                <li><i class="fas fa-check"></i> 3 almacenes/sucursales</li>
-                                <li><i class="fas fa-check"></i> Facturación electrónica</li>
-                                <li><i class="fas fa-check"></i> Reportes avanzados</li>
-                                <li><i class="fas fa-check"></i> Soporte prioritario</li>
-                                <li><i class="fas fa-check"></i> Hasta 3 usuarios</li>
-                                <li><i class="fas fa-check"></i> Integración bancaria</li>
+                        <div class="p-3 bg-white d-flex flex-column flex-grow-1">
+                            <ul class="features-list" style="font-size: 13px;">
+                                <li><i class="fas fa-check"></i> Hasta 400 préstamos activos</li>
+                                <li><i class="fas fa-check"></i> Hasta 400 clientes</li>
+                                <li><i class="fas fa-check"></i> Hasta 30 lineas de Credito</li>
+                                <li><i class="fas fa-check"></i> 3 Usuarios</li>
+                                <li><i class="fas fa-check"></i> Fotos y documentos de clientes</li>
+                                <li><i class="fas fa-check"></i> Soporte por correo electrónico y via WhatsApp</li>
+                                <li><i class="fas fa-check"></i> Soporte en llamadas</li>
+                                <li><i class="fas fa-check"></i> Backup Diario</li>
                             </ul>
-                            <button class="btn btn-membership btn-premium mt-3">Seleccionar Plan</button>
+                            <button class="btn btn-membership mt-auto" style="background:#28a745;color:white;">Seleccionar Plan</button>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Business Membership -->
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="membership-card shadow-sm">
-                        <div class="membership-header business">
-                            <h3>Empresarial</h3>
-                            <div class="price">$50<span class="period">/mes</span></div>
-                            <p>Para operaciones a gran escala</p>
+                <div class="wow fadeInUp" data-wow-delay="0.6s" style="width: 280px; flex: 0 0 auto;">
+                    <div class="membership-card shadow-sm h-100 d-flex flex-column">
+                        <div class="membership-header business" style="background: linear-gradient(45deg, #ffc107, #ffdd57); color:white;">
+                            <h5>Empresarial</h5>
+                            <div class="price">US$50<span class="period">/mes</span></div>
+                            <p style="font-size: 13px;">Para operaciones a gran escala</p>
                         </div>
-                        <div class="p-4 bg-white">
-                            <ul class="features-list">
-                                <li><i class="fas fa-check"></i> Productos ilimitados</li>
-                                <li><i class="fas fa-check"></i> Almacenes ilimitados</li>
-                                <li><i class="fas fa-check"></i> Facturación electrónica</li>
-                                <li><i class="fas fa-check"></i> Reportes ejecutivos</li>
-                                <li><i class="fas fa-check"></i> Soporte 24/7</li>
-                                <li><i class="fas fa-check"></i> Usuarios ilimitados</li>
-                                <li><i class="fas fa-check"></i> API para integraciones</li>
-                                <li><i class="fas fa-check"></i> Entrenamiento personalizado</li>
+                        <div class="p-3 bg-white d-flex flex-column flex-grow-1">
+                            <ul class="features-list" style="font-size: 13px;">
+                                <li><i class="fas fa-check"></i> Hasta 6000 préstamos activos</li>
+                                <li><i class="fas fa-check"></i> Hasta 6000 clientes</li>
+                                <li><i class="fas fa-check"></i> Hasta 100 lineas de Credito</li>
+                                <li><i class="fas fa-check"></i> 6 Usuarios</li>
+                                <li><i class="fas fa-check"></i> Fotos y documentos de clientes</li>
+                                <li><i class="fas fa-check"></i> Soporte por correo electrónico y via WhatsApp</li>
+                                <li><i class="fas fa-check"></i> Soporte en llamadas</li>
+                                <li><i class="fas fa-check"></i> Backup Diario</li>
                             </ul>
-                            <button class="btn btn-membership btn-business mt-3">Seleccionar Plan</button>
+                            <button class="btn btn-membership mt-auto" style="background:#ffc107;color:white;">Seleccionar Plan</button>
                         </div>
                     </div>
                 </div>
-                
-                <!-- One-Time Payment -->
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="membership-card shadow-sm">
-                        <div class="membership-header one-time">
-                            <h3>Pago Único</h3>
-                            <div class="price">$1,800</div>
-                            <p>Licencia perpetua</p>
+
+                <!-- Membership $90 -->
+                <div class="wow fadeInUp" data-wow-delay="0.7s" style="width: 280px; flex: 0 0 auto;">
+                    <div class="membership-card shadow-sm h-100 d-flex flex-column">
+                        <div class="membership-header" style="background: linear-gradient(45deg, #17a2b8, #5fdde5); color:white;">
+                            <h5>Elite</h5>
+                            <div class="price">US$90<span class="period">/mes</span></div>
+                            <p style="font-size: 13px;">Máximo rendimiento y soporte</p>
                         </div>
-                        <div class="p-4 bg-white">
-                            <ul class="features-list">
-                                <li><i class="fas fa-check"></i> Todos los features Premium</li>
-                                <li><i class="fas fa-check"></i> Sin pagos mensuales</li>
-                                <li><i class="fas fa-check"></i> Actualizaciones por 1 año</li>
-                                <li><i class="fas fa-check"></i> Soporte prioritario por 1 año</li>
-                                <li><i class="fas fa-check"></i> Instalación en servidor propio</li>
-                                <li><i class="fas fa-check"></i> Personalización inicial incluida</li>
-                                <li><i class="fas fa-check"></i> Capacitación para tu equipo</li>
+                        <div class="p-3 bg-white d-flex flex-column flex-grow-1">
+                            <ul class="features-list" style="font-size: 13px;">
+                                <li><i class="fas fa-check"></i> Préstamos ilimitados</li>
+                                <li><i class="fas fa-check"></i> Clientes ilimitados</li>
+                                <li><i class="fas fa-check"></i> Lineas de crédito ilimitadas</li>
+                                <li><i class="fas fa-check"></i> 15 Usuarios</li>
+                                <li><i class="fas fa-check"></i> Soporte prioritario 24/7</li>
+                                <li><i class="fas fa-check"></i> Backup en tiempo real</li>
+                                <li><i class="fas fa-check"></i> Todas las funciones desbloqueadas</li>
                             </ul>
-                            <button class="btn btn-membership btn-one-time mt-3">Seleccionar Plan</button>
+                            <button class="btn btn-membership mt-auto" style="background:#17a2b8;color:white;">Seleccionar Plan</button>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.2s">
-                <p class="mb-4">¿Necesitas un plan personalizado para tu negocio?</p>
-                <a style="background-color: dodgerblue; color: white;" 
-                   class="btn rounded-pill py-3 px-5" 
-                   href="https://wa.me/8293943239?text=¡Hola!%20Estoy%20interesado%20en%20obtener%20más%20información%20sobre%20StokifyPro%20y%20posiblemente%20un%20plan%20personalizado.%20Por%20favor,%20contáctenme%20cuando%20sea%20posible.%20Gracias." 
-                   target="_blank">
-                   Contáctanos
-                </a>
+
             </div>
         </div>
+
+        <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.2s">
+            <p class="mb-4">¿Necesitas un plan personalizado para tu negocio?</p>
+            <a style="background-color: dodgerblue; color: white;" 
+               class="btn rounded-pill py-3 px-5" 
+               href="https://wa.me/8293943239?text=¡Hola!%20Estoy%20interesado%20en%20obtener%20más%20información%20sobre%20PrestifyPro%20y%20posiblemente%20un%20plan%20personalizado.%20Por%20favor,%20contáctenme%20cuando%20sea%20posible.%20Gracias." 
+               target="_blank">
+               Contáctanos
+            </a>
+        </div>
     </div>
+</div>
 
     <!-- Testimonials Section -->
     <div class="container-fluid py-5">
